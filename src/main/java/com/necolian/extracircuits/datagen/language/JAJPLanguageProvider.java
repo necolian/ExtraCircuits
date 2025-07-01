@@ -9,7 +9,7 @@ import java.util.Locale;
 
 public class JAJPLanguageProvider extends LanguageProvider {
     public JAJPLanguageProvider(PackOutput output) {
-        super(output, ExtraCircuits.MODID, Locale.US.toString().toLowerCase());
+        super(output, ExtraCircuits.MODID, Locale.JAPAN.toString().toLowerCase());
     }
 
     @Override
