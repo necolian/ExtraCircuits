@@ -3,7 +3,6 @@ package com.necolian.extracircuits.datagen.model;
 import com.necolian.extracircuits.ExtraCircuits;
 import com.necolian.extracircuits.block.ExtraCircuitsBlocks;
 import net.minecraft.core.Direction;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -32,20 +31,22 @@ public class ExtraCircuitsBlockStateProvider extends BlockStateProvider {
     private void normalMachineHorizontalFacingBlockWIthRotations(Block block){
         String[] name = ExtraCircuitsBlocks.getBlockName(block).split("_");
 
-        String machineName = Arrays.stream(name, 0, name.length - 1)
+        String hoge = Arrays.stream(name, 0, name.length - 1)
                 .collect(Collectors.joining("_"));
+        String[] fuga = hoge.split(":");
 
+        String machineName = fuga.length > 1 ? fuga[1] : hoge;
         String tier = name[name.length - 1];
 
         horizontalFacingBlockWithRotations(
                 block,
                 new String[] {
-                        "block/machine_bottom",
-                        "block/machine_top",
+                        "block/machine/machine_bottom",
+                        "block/machine/machine_top",
                         "block/machine/" + tier + "/" + machineName,
-                        "block/machine/" + tier + "/back.png",
-                        "block/machine/" + tier + "/side.png",
-                        "block/machine/" + tier + "/side.png"
+                        "block/machine/" + tier + "/back",
+                        "block/machine/" + tier + "/side",
+                        "block/machine/" + tier + "/side"
                 });
 
     }
@@ -62,17 +63,8 @@ public class ExtraCircuitsBlockStateProvider extends BlockStateProvider {
                 modLoc(Directory[4]), //西
                 modLoc(Directory[5])); //東
 
-        getVariantBuilder(block)
-                .forAllStates(state -> {
-                    Direction facing = state.getValue(HorizontalDirectionalBlock.FACING);
-                    int yRot = (int) facing.toYRot();
 
-                    return ConfiguredModel.builder()
-                            .modelFile(model)
-                            .rotationY(yRot)
-                            .build();
-                });
-
+        horizontalBlock(block, model);
         simpleBlockItem(block, model);
     }
 }

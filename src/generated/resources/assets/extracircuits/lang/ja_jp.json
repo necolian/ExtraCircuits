@@ -1,4 +1,9 @@
 {
+  "block.extracircuits.precision_assembling_machine_tier1": "Tier1 精密組立機",
+  "block.extracircuits.precision_assembling_machine_tier2": "Tier2 精密組立機",
+  "block.extracircuits.precision_assembling_machine_tier3": "Tier3 精密組立機",
+  "block.extracircuits.precision_assembling_machine_tier4": "Tier4 精密組立機",
+  "block.extracircuits.precision_assembling_machine_tier5": "Tier5 精密組立機",
   "item.extracircuits.assembled_basis": "組み立て済み基盤",
   "item.extracircuits.basis": "基盤",
   "item.extracircuits.condenser_tier1": "Tier1 コンデンサ",
@@ -26,6 +31,7 @@
   "item.extracircuits.uec_tier3": "Tier3 万能電子部品",
   "item.extracircuits.uec_tier4": "Tier4 万能電子部品",
   "item.extracircuits.uec_tier5": "Tier5 万能電子部品",
+  "item.extracircuits.universal_connector": "万能コネクタ",
   "item.extracircuits.universal_ic_tier1": "Tier1 万能IC",
   "item.extracircuits.universal_ic_tier2": "Tier2 万能IC",
   "item.extracircuits.universal_ic_tier3": "Tier3 万能IC",

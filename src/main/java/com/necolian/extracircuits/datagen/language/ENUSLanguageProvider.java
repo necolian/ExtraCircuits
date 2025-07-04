@@ -74,10 +74,5 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier3,"Tier3 Precision Assembling Machine");
         addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier4,"Tier4 Precision Assembling Machine");
         addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier5,"Tier5 Precision Assembling Machine");
-        addItem(ExtraCircuitsItems.precision_assembling_machine_tier1 ,"Tier1 Precision Assembling Machine");
-        addItem(ExtraCircuitsItems.precision_assembling_machine_tier2 ,"Tier2 Precision Assembling Machine");
-        addItem(ExtraCircuitsItems.precision_assembling_machine_tier3 ,"Tier3 Precision Assembling Machine");
-        addItem(ExtraCircuitsItems.precision_assembling_machine_tier4 ,"Tier4 Precision Assembling Machine");
-        addItem(ExtraCircuitsItems.precision_assembling_machine_tier5 ,"Tier5 Precision Assembling Machine");
     }
 }
