@@ -1,6 +1,7 @@
 package com.necolian.extracircuits;
 
 import com.mojang.logging.LogUtils;
+import com.necolian.extracircuits.block.ExtraCircuitsBlocks;
 import com.necolian.extracircuits.item.ExtraCircuitsItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -20,5 +21,7 @@ public class ExtraCircuits {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ExtraCircuitsItems.register(modEventBus);
+        ExtraCircuitsBlocks.resister(modEventBus);
+        ExtraCircuitsCreativeTab.register(modEventBus);
     }
 }

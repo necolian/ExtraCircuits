@@ -1,6 +1,7 @@
 package com.necolian.extracircuits.datagen.language;
 
 import com.necolian.extracircuits.ExtraCircuits;
+import com.necolian.extracircuits.block.ExtraCircuitsBlocks;
 import com.necolian.extracircuits.item.ExtraCircuitsItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -14,7 +15,9 @@ public class ENUSLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        addItem(ExtraCircuitsItems.BASIS, "Basis");
+        addItem(ExtraCircuitsItems.basis, "Basis");
+        addItem(ExtraCircuitsItems.assembled_basis, "Assembled Basis");
+        addItem(ExtraCircuitsItems.universal_connector,"Universal Connector");
 
         // ** 部品 **
         //condenser
@@ -65,5 +68,16 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addItem(ExtraCircuitsItems.universal_sensor_tier3,"Tier3 Universal Sensor");
         addItem(ExtraCircuitsItems.universal_sensor_tier4,"Tier4 Universal Sensor");
         addItem(ExtraCircuitsItems.universal_sensor_tier5,"Tier5 Universal Sensor");
+
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier1,"Tier1 Precision Assembling Machine");
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier2,"Tier2 Precision Assembling Machine");
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier3,"Tier3 Precision Assembling Machine");
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier4,"Tier4 Precision Assembling Machine");
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier5,"Tier5 Precision Assembling Machine");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier1 ,"Tier1 Precision Assembling Machine");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier2 ,"Tier2 Precision Assembling Machine");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier3 ,"Tier3 Precision Assembling Machine");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier4 ,"Tier4 Precision Assembling Machine");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier5 ,"Tier5 Precision Assembling Machine");
     }
 }

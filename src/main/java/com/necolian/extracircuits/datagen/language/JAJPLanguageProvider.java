@@ -1,6 +1,7 @@
 package com.necolian.extracircuits.datagen.language;
 
 import com.necolian.extracircuits.ExtraCircuits;
+import com.necolian.extracircuits.block.ExtraCircuitsBlocks;
 import com.necolian.extracircuits.item.ExtraCircuitsItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -14,7 +15,9 @@ public class JAJPLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        addItem(ExtraCircuitsItems.BASIS, "基盤");
+        addItem(ExtraCircuitsItems.basis, "基盤");
+        addItem(ExtraCircuitsItems.assembled_basis, "組み立て済み基盤");
+        addItem(ExtraCircuitsItems.universal_connector,"万能コネクタ");
 
         // ** 部品 **
         //コンデンサ
@@ -65,5 +68,17 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addItem(ExtraCircuitsItems.universal_sensor_tier3,"Tier3 万能センサ");
         addItem(ExtraCircuitsItems.universal_sensor_tier4,"Tier4 万能センサ");
         addItem(ExtraCircuitsItems.universal_sensor_tier5,"Tier5 万能センサ");
+
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier1,"Tier1 精密組立機");
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier2,"Tier2 精密組立機");
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier3,"Tier3 精密組立機");
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier4,"Tier4 精密組立機");
+        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier5,"Tier5 精密組立機");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier1 ,"Tier1 精密組立機");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier2 ,"Tier2 精密組立機");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier3 ,"Tier3 精密組立機");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier4 ,"Tier4 精密組立機");
+        addItem(ExtraCircuitsItems.precision_assembling_machine_tier5 ,"Tier5 精密組立機");
+        
     }
 }
