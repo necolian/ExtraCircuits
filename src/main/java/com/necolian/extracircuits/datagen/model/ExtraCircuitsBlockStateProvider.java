@@ -12,8 +12,8 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import javax.annotation.Nullable;
-import java.util.List;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class ExtraCircuitsBlockStateProvider extends BlockStateProvider {
     public ExtraCircuitsBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -22,22 +22,32 @@ public class ExtraCircuitsBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        horizontalFacingBlockWithRotations(ExtraCircuitsBlocks.precision_assembling_machine_tier1.get(), null);
+        normalMachineHorizontalFacingBlockWIthRotations(ExtraCircuitsBlocks.precision_assembling_machine_tier1.get());
+        normalMachineHorizontalFacingBlockWIthRotations(ExtraCircuitsBlocks.precision_assembling_machine_tier2.get());
+        normalMachineHorizontalFacingBlockWIthRotations(ExtraCircuitsBlocks.precision_assembling_machine_tier3.get());
+        normalMachineHorizontalFacingBlockWIthRotations(ExtraCircuitsBlocks.precision_assembling_machine_tier4.get());
+        normalMachineHorizontalFacingBlockWIthRotations(ExtraCircuitsBlocks.precision_assembling_machine_tier5.get());
     }
 
-    private void normalMachineHorizontalFacingBlockWithRotations(Block block) {
-        String name = ExtraCircuitsBlocks.getBlockName(block);
+    private void normalMachineHorizontalFacingBlockWIthRotations(Block block){
+        String[] name = ExtraCircuitsBlocks.getBlockName(block).split("_");
 
-        String[] Directory = {
-                "block/",
-                "block/",
-                "block/",
-                "block/",
-                "block/",
-                "block/"
-        };
+        String machineName = Arrays.stream(name, 0, name.length - 1)
+                .collect(Collectors.joining("_"));
 
-        horizontalFacingBlockWithRotations(block, Directory);
+        String tier = name[name.length - 1];
+
+        horizontalFacingBlockWithRotations(
+                block,
+                new String[] {
+                        "block/machine_bottom",
+                        "block/machine_top",
+                        "block/machine/" + tier + "/" + machineName,
+                        "block/machine/" + tier + "/back.png",
+                        "block/machine/" + tier + "/side.png",
+                        "block/machine/" + tier + "/side.png"
+                });
+
     }
 
 
