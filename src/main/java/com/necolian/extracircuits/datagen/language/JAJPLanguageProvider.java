@@ -1,7 +1,6 @@
 package com.necolian.extracircuits.datagen.language;
 
 import com.necolian.extracircuits.ExtraCircuits;
-import com.necolian.extracircuits.block.ExtraCircuitsBlocks;
 import com.necolian.extracircuits.item.ExtraCircuitsItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -10,7 +9,7 @@ import java.util.Locale;
 
 public class JAJPLanguageProvider extends LanguageProvider {
     public JAJPLanguageProvider(PackOutput output) {
-        super(output, ExtraCircuits.MODID, Locale.JAPAN.toString().toLowerCase());
+        super(output, ExtraCircuits.MOD_ID, Locale.JAPAN.toString().toLowerCase());
     }
 
     @Override
@@ -69,17 +68,5 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addItem(ExtraCircuitsItems.universal_sensor_tier4,"Tier4 万能センサ");
         addItem(ExtraCircuitsItems.universal_sensor_tier5,"Tier5 万能センサ");
 
-        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier1,"Tier1 精密組立機");
-        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier2,"Tier2 精密組立機");
-        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier3,"Tier3 精密組立機");
-        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier4,"Tier4 精密組立機");
-        addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier5,"Tier5 精密組立機");
-
-        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier1","Tier1 精密組立機");
-        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier2","Tier2 精密組立機");
-        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier3","Tier3 精密組立機");
-        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier4","Tier4 精密組立機");
-        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier5","Tier5 精密組立機");
-        add("container." + ExtraCircuits.MODID + ".inventory", "インベントリ");
     }
 }

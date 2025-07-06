@@ -10,7 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ExtraCircuitsCreativeTab {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB_REGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExtraCircuits.MODID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB_REGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExtraCircuits.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> main = CREATIVE_MODE_TAB_REGISTER.register("extra_circuits",
             () -> CreativeModeTab.builder()

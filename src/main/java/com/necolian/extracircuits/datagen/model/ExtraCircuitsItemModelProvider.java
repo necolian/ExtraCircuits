@@ -8,7 +8,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ExtraCircuitsItemModelProvider extends ItemModelProvider {
     public ExtraCircuitsItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, ExtraCircuits.MODID, existingFileHelper);
+        super(output, ExtraCircuits.MOD_ID, existingFileHelper);
     }
 
     @Override

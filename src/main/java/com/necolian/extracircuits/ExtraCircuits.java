@@ -1,23 +1,18 @@
 package com.necolian.extracircuits;
 
 import com.mojang.logging.LogUtils;
-import com.necolian.extracircuits.block.ExtraCircuitsBlocks;
-import com.necolian.extracircuits.block.gui.container.ExtraCircuitsContainerTypes;
-import com.necolian.extracircuits.block.machine.ExtraCircuitsBlockEntityTypes;
 import com.necolian.extracircuits.item.ExtraCircuitsItems;
-import com.necolian.extracircuits.recipes.ExtraCircuitsRecipeSerializer;
-import com.necolian.extracircuits.recipes.ExtraCircuitsRecipeTypes;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(ExtraCircuits.MODID)
+@Mod(ExtraCircuits.MOD_ID)
 public class ExtraCircuits {
 
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "extracircuits";
+    public static final String MOD_ID = "extracircuits";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -25,11 +20,6 @@ public class ExtraCircuits {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ExtraCircuitsItems.register(modEventBus);
-        ExtraCircuitsBlocks.resister(modEventBus);
-        ExtraCircuitsBlockEntityTypes.resister(modEventBus);
-        ExtraCircuitsContainerTypes.resister(modEventBus);
         ExtraCircuitsCreativeTab.register(modEventBus);
-        ExtraCircuitsRecipeTypes.register(modEventBus);
-        ExtraCircuitsRecipeSerializer.register(modEventBus);
     }
 }
