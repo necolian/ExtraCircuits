@@ -2,7 +2,11 @@ package com.necolian.extracircuits;
 
 import com.mojang.logging.LogUtils;
 import com.necolian.extracircuits.block.ExtraCircuitsBlocks;
+import com.necolian.extracircuits.block.gui.container.ExtraCircuitsContainerTypes;
+import com.necolian.extracircuits.block.machine.ExtraCircuitsBlockEntityTypes;
 import com.necolian.extracircuits.item.ExtraCircuitsItems;
+import com.necolian.extracircuits.recipes.ExtraCircuitsRecipeSerializer;
+import com.necolian.extracircuits.recipes.ExtraCircuitsRecipeTypes;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -22,6 +26,10 @@ public class ExtraCircuits {
 
         ExtraCircuitsItems.register(modEventBus);
         ExtraCircuitsBlocks.resister(modEventBus);
+        ExtraCircuitsBlockEntityTypes.resister(modEventBus);
+        ExtraCircuitsContainerTypes.resister(modEventBus);
         ExtraCircuitsCreativeTab.register(modEventBus);
+        ExtraCircuitsRecipeTypes.register(modEventBus);
+        ExtraCircuitsRecipeSerializer.register(modEventBus);
     }
 }

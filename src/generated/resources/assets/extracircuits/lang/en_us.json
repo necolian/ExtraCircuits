@@ -4,6 +4,12 @@
   "block.extracircuits.precision_assembling_machine_tier3": "Tier3 Precision Assembling Machine",
   "block.extracircuits.precision_assembling_machine_tier4": "Tier4 Precision Assembling Machine",
   "block.extracircuits.precision_assembling_machine_tier5": "Tier5 Precision Assembling Machine",
+  "container.extracircuits.inventory": "Inventory",
+  "container.extracircuits.precision_assembling_machine_tier1": "Tier1 Precision Assembling Machine",
+  "container.extracircuits.precision_assembling_machine_tier2": "Tier2 Precision Assembling Machine",
+  "container.extracircuits.precision_assembling_machine_tier3": "Tier3 Precision Assembling Machine",
+  "container.extracircuits.precision_assembling_machine_tier4": "Tier4 Precision Assembling Machine",
+  "container.extracircuits.precision_assembling_machine_tier5": "Tier5 Precision Assembling Machine",
   "item.extracircuits.assembled_basis": "Assembled Basis",
   "item.extracircuits.basis": "Basis",
   "item.extracircuits.condenser_tier1": "Tier1 Condenser",
@@ -41,5 +47,6 @@
   "item.extracircuits.universal_sensor_tier2": "Tier2 Universal Sensor",
   "item.extracircuits.universal_sensor_tier3": "Tier3 Universal Sensor",
   "item.extracircuits.universal_sensor_tier4": "Tier4 Universal Sensor",
-  "item.extracircuits.universal_sensor_tier5": "Tier5 Universal Sensor"
+  "item.extracircuits.universal_sensor_tier5": "Tier5 Universal Sensor",
+  "a": ""
 }

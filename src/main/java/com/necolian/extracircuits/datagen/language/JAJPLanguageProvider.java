@@ -74,6 +74,12 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier3,"Tier3 精密組立機");
         addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier4,"Tier4 精密組立機");
         addBlock(ExtraCircuitsBlocks.precision_assembling_machine_tier5,"Tier5 精密組立機");
-        
+
+        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier1","Tier1 精密組立機");
+        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier2","Tier2 精密組立機");
+        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier3","Tier3 精密組立機");
+        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier4","Tier4 精密組立機");
+        add("container." + ExtraCircuits.MODID + ".precision_assembling_machine_tier5","Tier5 精密組立機");
+        add("container." + ExtraCircuits.MODID + ".inventory", "インベントリ");
     }
 }
